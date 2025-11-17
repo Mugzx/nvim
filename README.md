@@ -12,7 +12,7 @@ lua
 │   ├── keymaps.lua # 键位映射
 │   ├── lazy.lua # 插件管理
 │   └── options.lua # 全局设置
-└── components
+└── plugins
     ├── codeium.lua # Codeium AI
     ├── colorscheme.lua # Catppuccin 主题配色（亚克力透明背景）
     └── tiDiagonstic.lua # 行内提示优化
@@ -20,4 +20,4 @@ lua
 
 ## 参考
 
-感谢[H0ron1ee](https://github.com/horonlee)提供的开发配置指~~北~~！
+感谢 [H0ron1ee](https://github.com/horonlee) 提供的开发配置指~~北~~！
