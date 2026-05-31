@@ -3,7 +3,7 @@
 A starter template for [LazyVim](https://github.com/LazyVim/LazyVim).
 Refer to the [documentation](https://lazyvim.github.io/installation) to get started.
 
-## 配置项
+## 配置
 
 ```sh
 ./lua
@@ -14,9 +14,8 @@ Refer to the [documentation](https://lazyvim.github.io/installation) to get star
 │   └── options.lua # 全局设置
 └── plugins
     ├── catppuccin.lua # 颜色主题
-    ├── opencode.lua # AI Agent
-    ├── tiny-inline-diagnostic.lua # 行内提示优化
-    └── wakatime.lua # 时间统计
+    ├── misc.lua # 小而杂的插件
+    └── opencode.lua # AI Agent
 ```
 
 ## 参考

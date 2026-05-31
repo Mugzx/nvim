@@ -8,7 +8,6 @@ return {
     priority = 1000,
     config = function()
       require("tiny-inline-diagnostic").setup()
-      vim.diagnostic.config({ virtual_text = false }) -- Disable Neovim's default virtual text diagnostics
     end,
   },
 
@@ -22,6 +21,50 @@ return {
     "HiPhish/rainbow-delimiters.nvim",
     main = "rainbow-delimiters.setup",
     submodules = false,
-    opts = {},
+  },
+
+  -- 滚动条插件，显示滚动位置
+  -- https://github.com/dstein64/nvim-scrollview
+  {
+    "dstein64/nvim-scrollview",
+    opts = {
+      current_only = true,
+      base = "buffer",
+      signs_on_startup = { "all" },
+      diagnostics_severities = { vim.diagnostic.severity.ERROR, vim.diagnostic.severity.WARN },
+    },
+  },
+
+  -- 缩略图概览插件，显示文件结构和代码块
+  -- https://github.com/nvim-mini/mini.map
+  {
+    "nvim-mini/mini.map",
+    version = false,
+    config = function()
+      require("mini.map").setup()
+    end,
+  },
+
+  -- lazygit 插件，简单的交互式 Git 界面
+  -- https://github.com/kdheepak/lazygit.nvim
+  {
+    "kdheepak/lazygit.nvim",
+    lazy = true,
+    cmd = {
+      "LazyGit",
+      "LazyGitConfig",
+      "LazyGitCurrentFile",
+      "LazyGitFilter",
+      "LazyGitFilterCurrentFile",
+    },
+    -- optional for floating window border decoration
+    dependencies = {
+      "nvim-lua/plenary.nvim",
+    },
+    -- setting the keybinding for LazyGit with 'keys' is recommended in
+    -- order to load the plugin when the command is run for the first time
+    keys = {
+      { "<leader>lg", "<cmd>LazyGit<cr>", desc = "LazyGit" },
+    },
   },
 }
