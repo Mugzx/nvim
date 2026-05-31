@@ -7,11 +7,23 @@
 -- Or remove existing autocmds by their group name (which is prefixed with `lazyvim_` for the defaults)
 -- e.g. vim.api.nvim_del_augroup_by_name("lazyvim_wrap_spell")
 
--- 确保在LSP 配置完成之前关闭virtual_text
+-- 'rachartier/tiny-inline-diagnostic.nvim'
+-- 确保在 LSP 配置完成之前关闭 virtual_text
 vim.api.nvim_create_autocmd("LspAttach", {
   callback = function()
     vim.diagnostic.config({
       virtual_text = false, -- Disable virtual text
     })
+  end,
+})
+
+-- 'nvim-mini/mini.map'
+-- 默认打开缩略图概览
+vim.api.nvim_create_autocmd("BufEnter", {
+  pattern = "*",
+  callback = function()
+    if vim.bo.buftype == "" then
+      require("mini.map").open()
+    end
   end,
 })
