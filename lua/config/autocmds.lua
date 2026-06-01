@@ -18,7 +18,7 @@ vim.api.nvim_create_autocmd("LspAttach", {
 })
 
 -- 'nvim-mini/mini.map'
--- 默认打开缩略图概览
+-- 默认打开缩略图概览，避免每次都要手动打开
 vim.api.nvim_create_autocmd("BufEnter", {
   pattern = "*",
   callback = function()
