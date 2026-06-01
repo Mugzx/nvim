@@ -14,8 +14,10 @@ Refer to the [documentation](https://lazyvim.github.io/installation) to get star
 │   └── options.lua # 全局设置
 └── plugins
     ├── catppuccin.lua # 颜色主题
+    ├── lazygit.lua # git 交互
     ├── misc.lua # 小而杂的插件
-    └── opencode.lua # AI Agent
+    ├── opencode.lua # AI Agent
+    └── yazi.lua # 文件管理
 ```
 
 ## 参考

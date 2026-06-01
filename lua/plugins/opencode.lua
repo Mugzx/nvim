@@ -1,4 +1,4 @@
--- OpenCode 插件，Alt+A 可打开
+-- OpenCode 插件，需要搭配内置终端使用
 -- https://github.com/nickjvandyke/opencode.nvim
 return {
   "nickjvandyke/opencode.nvim",
