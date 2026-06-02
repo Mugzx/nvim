@@ -3,8 +3,8 @@
 -- Add any additional keymaps here
 
 -- 常用的 LazyVim 快捷键
-vim.keymap.set("n", "<leader>ll", ":Lazy<cr>", { desc = "Lazy" })
-vim.keymap.set("n", "<leader>ls", ":Lazy sync<cr>", { desc = "Lazy Sync" })
-vim.keymap.set("n", "<leader>ld", ":Lazy debug<cr>", { desc = "Lazy Debug" })
+vim.keymap.set("n", "<leader>ll", "<cmd>Lazy<cr>", { desc = "Lazy" })
+vim.keymap.set("n", "<leader>ls", "<cmd>Lazy sync<cr>", { desc = "Lazy Sync" })
+vim.keymap.set("n", "<leader>ld", "<cmd>Lazy debug<cr>", { desc = "Lazy Debug" })
 
-vim.keymap.set("n", "<C-j>", ":split | term<cr>", { desc = "Open Terminal" })
+vim.keymap.set("n", "<C-j>", "<cmd>split | term<cr>", { desc = "Open Terminal" })

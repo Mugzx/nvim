@@ -13,18 +13,18 @@ return {
     {
       "<leader>-",
       mode = { "n", "v" },
-      ":Yazi<cr>",
+      "<cmd>Yazi<cr>",
       desc = "Open yazi at the current file",
     },
     {
       -- Open in the current working directory
       "<leader>cw",
-      ":Yazi cwd<cr>",
+      "<cmd>Yazi cwd<cr>",
       desc = "Open the file manager in nvim's working directory",
     },
     {
       "<c-up>",
-      ":Yazi toggle<cr>",
+      "<cmd>Yazi toggle<cr>",
       desc = "Resume the last yazi session",
     },
   },
