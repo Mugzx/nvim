@@ -1,19 +1,20 @@
--- 小而杂的插件汇总
+-- 界面相关
 return {
-  -- 行内提示优化插件，当聚焦到当前行时显示全部提示，支持换行显示
-  -- https://github.com/rachartier/tiny-inline-diagnostic.nvim
+  -- Catppuccin 主题插件，可选 mocha, macchiato, frappe, latte
+  -- https://github.com/catppuccin/nvim
   {
-    "rachartier/tiny-inline-diagnostic.nvim",
-    event = "VeryLazy",
+    "catppuccin/nvim",
+    name = "catppuccin",
     priority = 1000,
+    lazy = false,
     config = function()
-      require("tiny-inline-diagnostic").setup()
+      require("catppuccin").setup({
+        flavour = "mocha",
+        transparent_background = true,
+      })
+      vim.cmd.colorscheme("catppuccin-mocha")
     end,
   },
-
-  -- WakaTime 插件，可以统计码字时间
-  -- https://wakatime.com/neovim
-  { "wakatime/vim-wakatime", lazy = false },
 
   -- 彩虹括号插件，更好的显示嵌套情况
   -- https://github.com/hiphish/rainbow-delimiters.nvim
@@ -46,13 +47,5 @@ return {
     config = function()
       require("mini.map").setup()
     end,
-  },
-
-  -- 按键显示插件，在演示时可以显示输入内容
-  -- https://github.com/nstefan002/screenkey.nvim
-  {
-    "NStefan002/screenkey.nvim",
-    lazy = false,
-    version = "*", -- or branch = "main", to use the latest commit
   },
 }
