@@ -41,7 +41,7 @@ return {
     "nvim-mini/mini.map",
     version = false,
     keys = {
-      { "<leader>mm", ":lua MiniMap.toggle()<cr>", desc = "Toggle minimap" },
+      { "<leader>mm", "<cmd>lua MiniMap.toggle()<cr>", desc = "Toggle minimap" },
     },
     config = function()
       require("mini.map").setup()
