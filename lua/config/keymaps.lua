@@ -6,3 +6,5 @@
 vim.keymap.set("n", "<leader>ll", ":Lazy<cr>", { desc = "Lazy" })
 vim.keymap.set("n", "<leader>ls", ":Lazy sync<cr>", { desc = "Lazy Sync" })
 vim.keymap.set("n", "<leader>ld", ":Lazy debug<cr>", { desc = "Lazy Debug" })
+
+vim.keymap.set("n", "<C-j>", ":split | term<cr>", { desc = "Open Terminal" })
