@@ -41,11 +41,18 @@ return {
     "nvim-mini/mini.map",
     version = false,
     keys = {
-      { "<leader>mc", ":lua MiniMap.close()<cr>", desc = "Close minimap" },
-      { "<leader>mo", ":lua MiniMap.open()<cr>", desc = "Open minimap" },
+      { "<leader>mm", ":lua MiniMap.toggle()<cr>", desc = "Toggle minimap" },
     },
     config = function()
       require("mini.map").setup()
     end,
+  },
+
+  -- 按键显示插件，在演示时可以显示输入内容
+  -- https://github.com/nstefan002/screenkey.nvim
+  {
+    "NStefan002/screenkey.nvim",
+    lazy = false,
+    version = "*", -- or branch = "main", to use the latest commit
   },
 }

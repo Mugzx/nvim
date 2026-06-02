@@ -27,3 +27,14 @@ vim.api.nvim_create_autocmd("BufEnter", {
     end
   end,
 })
+
+-- 自动切换到当前文件所在目录，方便终端命令的使用
+vim.api.nvim_create_autocmd("BufEnter", {
+  pattern = "*",
+  callback = function()
+    local dir = vim.fn.expand("%:p:h")
+    if dir ~= "" and vim.fn.isdirectory(dir) == 1 then
+      vim.cmd("cd " .. dir)
+    end
+  end,
+})

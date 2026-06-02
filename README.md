@@ -22,4 +22,4 @@ Refer to the [documentation](https://lazyvim.github.io/installation) to get star
 
 ## 参考
 
-感谢 [H0ron1ee](https://github.com/horonlee) 提供的开发配置指~~北~~！
+感谢 [H0ron1ee](https://github.com/horonlee/nvim) 提供的开发配置指~~北~~！
