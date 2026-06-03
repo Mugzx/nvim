@@ -48,4 +48,25 @@ return {
       require("mini.map").setup()
     end,
   },
+
+  -- 调试插件，现代的操作界面
+  -- https://github.com/igorlfs/nvim-dap-view
+  {
+    "igorlfs/nvim-dap-view",
+    ---@module 'dap-view'
+    ---@type dapview.Config
+    opts = {
+      winbar = {
+        default_section = "scopes",
+        controls = {
+          enabled = true,
+        },
+      },
+      help = {
+        border = "rounded",
+      },
+    },
+  },
+  -- HACK: 显式返回空函数内容，避免报错
+  { "mfussenegger/nvim-dap", config = function() end },
 }
