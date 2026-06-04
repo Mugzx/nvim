@@ -19,3 +19,7 @@ vim.g.loaded_ruby_provider = 0
 -- 设置自动换行
 vim.opt.wrap = true
 vim.opt.linebreak = true
+
+vim.opt.list = true
+vim.opt.listchars:append({ space = "·" })
+vim.opt.showbreak = "↳⋅"

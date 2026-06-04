@@ -33,10 +33,16 @@ local has_initial_cd = false
 vim.api.nvim_create_autocmd("BufEnter", {
   pattern = "*",
   callback = function()
-    if has_initial_cd then return end
-    if vim.bo.buftype ~= "" then return end
+    if has_initial_cd then
+      return
+    end
+    if vim.bo.buftype ~= "" then
+      return
+    end
     local file = vim.fn.expand("%:p")
-    if file == "" or vim.fn.isdirectory(file) == 1 then return end
+    if file == "" or vim.fn.isdirectory(file) == 1 then
+      return
+    end
     local dir = vim.fn.fnamemodify(file, ":h")
     if dir ~= "" and vim.fn.isdirectory(dir) == 1 then
       vim.cmd("cd " .. dir)
