@@ -22,29 +22,4 @@ return {
     lazy = false,
     version = "*", -- or branch = "main", to use the latest commit
   },
-
-  -- 启动耗时插件，调试使用
-  -- https://github.com/dstein64/vim-startuptime
-  {
-    "dstein64/vim-startuptime",
-    cmd = "StartupTime",
-    config = function()
-      vim.g.startuptime_tries = 10
-    end,
-  },
-
-  -- Code Actions 插件，行内提示与可视化
-  -- https://github.com/kosayoda/nvim-lightbulb
-  { "kosayoda/nvim-lightbulb" },
-
-  -- https://github.com/rachartier/tiny-code-action.nvim
-  {
-    "rachartier/tiny-code-action.nvim",
-    event = "LspAttach",
-    config = function()
-      vim.keymap.set({ "n", "x" }, "<leader>ca", function()
-        require("tiny-code-action").code_action()
-      end, { noremap = true, silent = true, desc = "Code Action" })
-    end,
-  },
 }
