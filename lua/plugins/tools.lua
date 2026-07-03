@@ -11,10 +11,6 @@ return {
     end,
   },
 
-  -- WakaTime 插件，可以统计码字时间
-  -- https://github.com/wakatime/vim-wakatime
-  { "wakatime/vim-wakatime", lazy = false },
-
   -- 按键显示插件，在演示时可以显示输入内容
   -- https://github.com/nstefan002/screenkey.nvim
   {
