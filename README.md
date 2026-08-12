@@ -13,11 +13,8 @@ lua
 │   ├── lazy.lua # 插件管理
 │   └── options.lua # 全局设置
 └── plugins
-    ├── lazygit.lua # git 交互
-    ├── opencode.lua # AI Agent
-    ├── tools.lua # 工具插件
-    ├── ui.lua # 界面主题
-    └── yazi.lua # 文件管理
+    ├── tools.lua # 工具相关
+    └── ui.lua # 界面相关
 ```
 
 ## 参考
